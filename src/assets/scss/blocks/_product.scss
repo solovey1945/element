@@ -1,0 +1,85 @@
+.product {
+    background-color: #f4f4f4;
+    padding: 100px 0;
+    position: relative;
+    &__slider {
+        margin-top: 30px;
+        .product__slide {
+            width: 386px;
+            min-height: 472px;
+            text-align: center;
+            background: $white;
+            padding: 10px;
+            margin: 0 15px;
+            .product__img {
+                margin: 14px 0 14px;
+                img {
+                    height: 220px;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .product__content {
+                margin-bottom: 25px;
+                &-title {
+                    margin-bottom: 17px;
+                    .lower {
+                        color: $aqua;
+                    }
+                    .upper {
+                        color: $aqua;
+                    }
+                }
+                &-desc {
+                    color: $grey;
+                    font-size: 16px;
+                    font-weight: 300;
+                    max-width: 320px;
+                    margin: 0 auto 25px;
+                    line-height: 24px;
+                }
+                &-more {
+                    color: $aqua;
+                    font-weight: 300;
+                    font-family: $font-roboto;
+                }
+            }
+            
+        }
+        /* Стилизация слайдера */
+        .slick-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 28px;
+            button {
+                font-size: 0;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #dcdcdc;
+                margin: 0 10px;
+            }
+            li.slick-active button {
+                background-color: $aqua-two;
+            }
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 0;
+            z-index: 5;
+            width: 120px;
+            height: 9px;
+            background-color: $aqua;
+        }
+        .slick-prev {
+            left: -15%;
+            -webkit-mask-image: url('../img/arrows/arrow-prev.svg');
+        }
+        .slick-next {
+            right: -15%;
+            -webkit-mask-image: url('../img/arrows/arrow-next.svg');
+        }
+    }
+}

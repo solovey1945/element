@@ -1,0 +1,28 @@
+.advantages {
+    &__list {
+        margin-top: 60px;
+        .advantages__column {
+            max-width: 310px;
+            margin: 0 auto 55px auto;
+            .advantages__line {
+                display: flex;
+                align-items: center;
+            }
+            &-caption {
+                font-size: 18px;
+                color: $aqua;
+                font-family: $font-pt;
+                font-weight: 700;
+                letter-spacing: 3.6px;
+                line-height: 28px;
+                margin-left: 20px;
+            }
+            &-text {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 28px;
+                margin-top: 20px;
+            }
+        }
+    }
+}

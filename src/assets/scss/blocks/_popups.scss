@@ -1,0 +1,123 @@
+.popup {
+    position: fixed;
+    background-color: rgba($black, .8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+	left: 0;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, top 0.5s;
+
+    &__request {
+        .popup__body {
+            position: absolute;
+            width: 1000px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            background-color: $white;
+            .popup__close {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 15px;
+                height: 15px;
+                display: block;
+                mask-image: url(../img/cross.svg);
+                background-color: $aqua-two;
+                cursor: pointer;
+            }
+            .popup__left {
+                width: 30%;
+                padding: 35px;
+                text-align: center;
+                .popup__passport {
+                    margin-top: 25px;
+                    a {
+                        color: $red;
+                        font-family: $font-pt;
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 26px;
+                        text-transform: uppercase;
+                        letter-spacing: 1.4px;
+                    }
+                }
+            }
+            .popup__right {
+                width: 70%;
+                .popup__row_one {
+                    padding: 35px;
+                    background-color: #f4f4f4;
+                    .popup__title {
+                        color: $aqua;
+                        font-family: $font-pt;
+                        font-size: 24px;
+                        font-weight: 700;
+                        letter-spacing: 4.8px;
+                        line-height: 32px;
+                        margin-bottom: 15px;
+                    }
+                    .popup__text {
+                        color: $grey;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 300;
+                    }
+                }
+                .popup__row_two {
+                    padding: 35px;
+                    background-color: $aqua-two;
+                    .form {
+                        padding-bottom: 20px;
+                        &__title {
+                            color: $white;
+                            font-family: $font-pt;
+                            font-size: 24px;
+                            font-weight: 700;
+                            line-height: 32px;
+                            letter-spacing: 4.8px;
+                            margin-bottom: 30px;
+                        }
+                        &__input {
+                            input {
+                                background-color: $aqua-two;
+                                padding: 13px;
+                                width: 100%;
+                                font-family: $font-pt;
+                                font-size: 14px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                letter-spacing: 3.6px;
+                                border-bottom: 1px solid $white;
+                                &::placeholder {
+                                    color: $white;
+                                }
+                                &:focus {
+                                    background: $white;
+                                    border: 1px solid $white;
+                                    &::placeholder {
+                                        color: $black;
+                                    }
+                                }
+                                &[name=email],
+                                &[name=name] {
+                                    margin-bottom: 30px;
+                                }
+                            }
+                            
+                        }
+                        &__btn {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

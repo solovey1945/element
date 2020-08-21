@@ -1,0 +1,37 @@
+#backtop {
+    display: inline-block;
+    background-color: $aqua;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+    opacity .5s,
+    visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#backtop i {
+    font-size: 2em;
+    line-height: 50px;
+    color: $white;
+}
+
+#backtop:hover {
+    cursor: pointer;
+    background-color: $grey;
+}
+
+#backtop:active {
+    background-color: #555;
+}
+
+#backtop.show-btn {
+    opacity: 1;
+    visibility: visible;
+}

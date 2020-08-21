@@ -1,0 +1,51 @@
+.contacts {
+    background-image: url(../img/map.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    position: relative;
+    &__info {
+        width: 490px;
+        border: 10px solid $red;
+        background-color: $white;
+        display: inline-block;
+        position: absolute;
+        top: 20%;
+        left: 65%;
+        text-align: center;
+        padding: 55px 60px 60px;
+        &-mail {
+            margin: 46px 0 10px 0;
+            a {
+                color: $aqua;
+                font-family: $font-pt;
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: 3.6px;
+                line-height: 31.89px;
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+        &-tel {
+            margin-bottom: 15px;
+            a {
+                color: $grey;
+                font-size: 42px;
+                font-weight: 400;
+                line-height: 31.89px;
+                display: block;
+            }
+        }
+        &-address {
+            font-weight: 300;
+            line-height: 28px;
+            margin-bottom: 45px;
+        }
+        &-btn {
+            button {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/nullstyle';
+
+::selection {
+    background-color: darken($red, 5);
+    color: $white;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    position: relative;
+}
+.container  {
+    max-width: $container-break !important;
+}
+
+.btn {
+    color: $white;
+    font-family: $font-pt;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    transition: all .2s;
+    z-index: 8;
+    &--aqua {
+        font-size: 14px;
+        background-color: $aqua-two;
+        letter-spacing: 1.4px;
+        &:hover {
+            background-color: darken($aqua-two, 8);
+        }
+    }
+    &--red {
+        background-color: $red;
+        font-size: 20px;
+        letter-spacing: 2px;
+        &:hover {
+            background-color: #ff734d;
+        }
+        &:active {
+            background-color: #983216;
+        }
+        &_pos {
+            width: 386px;
+            height: $height-btn;
+            position: absolute;
+            bottom: -$height-btn / 2;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &--small {
+        width: 175px;
+        height: 45px;
+    }
+}
+
+.title__wrap {
+    text-align: center;
+    position: relative;
+    .suptitle {
+        color: #999999;
+        font-family: $font-pt;
+        font-size: 16px;
+        line-height: 31.89px;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+    }
+    .title {
+        color: #666666;
+        font-family: $font-roboto;
+        font-size: 42px;
+        padding: 10px 0 40px 0;
+    }
+
+    &::after {
+        content: '';
+        width: 151px;
+        height: 2px;
+        background-color: $aqua-two;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+input {
+    &:required:valid { 
+        border-bottom: 1px solid green !important;
+    }
+    &:focus:required:invalid { 
+        border-bottom: 1px solid $red !important; 
+    }
+}
+[class*=__content-title] {
+    .lower {
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 3.6px;
+        line-height: 28px;
+    }
+    .upper {
+        font-family: $font-pt;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 3.6px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+}
+
+[class*=--border] {
+    border: 1px solid #dedede;
+}
+
+@import 'blocks/preloader';
+@import 'blocks/header';
+@import 'blocks/about';
+@import 'blocks/advantages';
+@import 'blocks/product';
+@import 'blocks/stages';
+@import 'blocks/order';
+@import 'blocks/contacts';
+@import 'blocks/footer';
+@import 'blocks/popups';
+@import 'blocks/back-top';
+@import 'utils/media';
+
+
+
+

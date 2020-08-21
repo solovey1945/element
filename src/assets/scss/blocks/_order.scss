@@ -1,0 +1,88 @@
+.order {
+    background-color: #f4f4f4;
+    padding: 130px 0;
+    &__tabs {
+        margin-top: 40px;
+        .order__tab {
+            text-align: center;
+            background-color: $white;
+            padding: 10px;
+            margin: 0 10px;
+            max-width: 282px;
+            .order__icon {
+                height: 87px;
+                margin: 34px 0;
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .order__content {
+                padding: 30px;
+                &-title {
+                    .lower {
+                        color: $red;
+                    }
+                    .upper {
+                        color: $aqua;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .form__container {
+        background-color: $white;
+        padding: 10px;
+        margin-top: 80px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 2px;
+            height: 150px;
+            background-color: $aqua-two;
+            top: 0;
+            left: 11%;
+            transform: translateY(-75%);
+        }
+        .form__border {
+            border: 10px solid $aqua-two;
+            padding: 60px;
+            .title__wrap {
+                max-width: 570px;
+                margin: 0 auto;
+            }
+            .form {
+                padding: 40px 40px 0;
+                &__input {
+                    margin-bottom: 30px;
+                    input {
+                        padding: 25px;
+                        width: 100%;
+                        font-family: $font-pt;
+                        font-size: 18px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        letter-spacing: 3.6px;
+                        color: #999;
+                        border-bottom: 1px solid #999;
+                        &:focus {
+                            border: none;
+                            outline: 1px solid $aqua-two; 
+                        }
+                    }
+                }
+                &__button {
+                    button {
+                        width: 100%;
+                        height: 75px;
+                    }
+                }
+            }
+        }
+    }
+}
